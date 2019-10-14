@@ -5,12 +5,10 @@ using namespace std;
 
 int minX, minY, maxX, maxY;
 int fstX, fstY, sndX, sndY;
-
 int code1[4] = { 0, 0, 0, 0 };
 int code2[4] = { 0, 0, 0, 0 };
 
 bool isReject = false;
-
 int getcode1(int x, int y) {
 	if (y > maxY)
 	{
@@ -21,45 +19,35 @@ int getcode1(int x, int y) {
 	{
 		code1[1] = 1;
 	}
-
 	if (x > maxX)
 	{
 		code1[2] = 1;
 	}
-
 	if (x < minX)
 	{
 		code1[3] = 1;
 	}
-
 	int codeRes1 = code1[0] * 1000 + code1[1] * 100 + code1[2] * 10 + code1[3];
-
 	return codeRes1;
 }
-
-int getcode2(int x, int y) {
+	int getcode2(int x, int y) {
 	if (y > maxY)
 	{
 		code2[0] = 1;
 	}
-
 	if (y < minY)
 	{
 		code2[1] = 1;
 	}
-
 	if (x > maxX)
 	{
 		code2[2] = 1;
 	}
-
 	if (x < minX)
 	{
 		code2[3] = 1;
 	}
-
 	int codeRes2 = code2[0] * 1000 + code2[1] * 100 + code2[2] * 10 + code2[3];
-
 	return codeRes2;
 }
 
