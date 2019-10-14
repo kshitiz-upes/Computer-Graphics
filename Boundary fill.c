@@ -36,7 +36,6 @@ void display()
 {
     glClearColor(0.1, 0.6, 0.4, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
-    
     drawPolygon(150, 200, 300, 200, 350 ,400);
     glFlush();
 }
