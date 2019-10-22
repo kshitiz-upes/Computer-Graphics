@@ -11,13 +11,11 @@ void draw_pixel(int x,int y)
     glVertex2i(x,y);
     glEnd();
 }
-
 void edgedetect(float x1,float y1,float x2,float y2,int *le,int *re)
 {
     float temp,x,mx;
     int i;
-    
-    if(y1>y2)
+     if(y1>y2)
     {
         temp=x1,x1=x2,x2=temp;
         temp=y1,y1=y2,y2=temp;
@@ -29,8 +27,7 @@ void edgedetect(float x1,float y1,float x2,float y2,int *le,int *re)
         mx=(x2-x1)/(y2-y1);
     
     x=x1;
-    
-    for(i=int(y1);i<=(int)y2;i++)
+        for(i=int(y1);i<=(int)y2;i++)
     {
         if(x<(float)le[i]) le[i]=(int)x;
         if(x>(float)re[i]) re[i]=(int)x;
@@ -58,7 +55,6 @@ void scanfill(float x1,float y1,float x2,float y2,float x3,float y3,float x4,flo
     }
 }
 
-
 void display()
 {
     x1=250.0;y1=200.0;x2=150.0;y2=300.0;x3=250.0;
@@ -73,10 +69,8 @@ void display()
     glEnd();
     
     scanfill(x1,y1,x2,y2,x3,y3,x4,y4);
-    
     glFlush();
 }
-
 
 void init()
 {
@@ -91,10 +85,8 @@ int main(int argc,char **argv)
     glutInit(&argc,argv);
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowSize(500,500);
-    
     glutCreateWindow("polygon below");
     glutDisplayFunc(display);
-    
     init();
     glutMainLoop();
 }
