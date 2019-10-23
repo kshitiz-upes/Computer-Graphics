@@ -81,8 +81,6 @@ glClear(GL_COLOR_BUFFER_BIT);
         glFlush();
         clip(x1,y3,x2,y2);
     }
-
-
 }
 int main(int argc,char ** argv)
 {
