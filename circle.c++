@@ -4,7 +4,6 @@
 	#include<stdlib.h>
 
 	int x1,yr,r;
-
 	void Mid_Point_Circle()
 	{
 	int x = 0;
@@ -55,7 +54,6 @@
 	
 	glFlush();
 	}
-
 	void init(void)
 	{
 	glClearColor(0.0,0.0,0.0,0.0);
@@ -63,7 +61,6 @@
 	glLoadIdentity();
 	gluOrtho2D(-100,100,-100,100);
 	}
-
 	int main(int argc, char** argv) {
 	printf("Enter the value of x1: ");
 	scanf("%d",&x1);
@@ -71,7 +68,6 @@
 	scanf("%d",&yr);
 	printf("Enter the value of radius of circle: ");
 	scanf("%d",&r);
-
 	glutInit(&argc, argv);
 	glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
 	glutInitWindowSize (500, 500);
