@@ -7,7 +7,6 @@
 using namespace std;
 
 int x1,yr,x2,y2;
-
 void DDA(void){
     float step,k,x,y,Xinc,Yinc,m;
     int dx,dy;
@@ -46,17 +45,12 @@ void DDA(void){
     for(k=0;k<=step;k++){
         x = x + Xinc;
         y = y + Yinc;
-        
-        
         x = round(x);
         y = round(y);
-        
         glBegin(GL_POINTS);
         glVertex2d(x,y);
         glEnd();
-    }
-    
-    
+    }  
     glFlush();
 }
 
@@ -67,7 +61,6 @@ void init(void)
     glLoadIdentity();
     gluOrtho2D(-100,100,-100,100);
 }
-
 int main(int argc, char** argv) {
     cout<<("Enter the value of x1 : ");
     cin>>x1;
