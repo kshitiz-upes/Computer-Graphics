@@ -70,7 +70,6 @@ int main(int argc, char** argv) {
     cin>>x2;
     cout<<("Enter the value of y2 : ");
     cin>>y2;
-
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize (500, 500);
