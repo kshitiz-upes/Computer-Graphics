@@ -50,7 +50,6 @@ int main (int argc,char **argv)
     glutInitWindowPosition(50,25);
     glutInitWindowSize(500,250);
     glutCreateWindow("Bresenham Line");
-    
     init();
     glutDisplayFunc(Line);
     glutMainLoop();
