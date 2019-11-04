@@ -4,7 +4,8 @@
 int x1=-80,x2=0,y3=-80,y2=0;
 float u1=0,u2=1;
 int xmin=-50,ymin=-50,xmax=50,ymax=50;
-double p[4],q[4];  
+double p[4],q[4]; 
+
 void init()
 {
     glClearColor(1.0,1.0,1.0,1.0);
