@@ -1,6 +1,5 @@
 #include <windows.h>
 #include <gl/glut.h>
-
 struct Point{
     float x,y;
 } w[4],oVer[4];
