@@ -4,6 +4,7 @@ int ww = 600, wh = 500;
 float bgCol[3] = { 0.2, 0.4,0.0 };
 float intCol[3] = { 1.0,0.0,0.0 };
 float fillCol[3] = { 0.4,0.0,0.0 };
+
 void setPixel(int pointx, int pointy, float f[3])
 {
     glBegin(GL_POINTS);
@@ -16,6 +17,7 @@ void getPixel(int x, int y, float pixels[3])
 {
     glReadPixels(x, y, 0.0, 0.0, GL_RGB, GL_FLOAT, pixels);
 }
+
 void drawPolygon(int x1, int y1, int x2, int y2 , int x3 , int y3)
 {
     glColor3f(.20, .3 ,.5010);
@@ -32,6 +34,7 @@ void drawPolygon(int x1, int y1, int x2, int y2 , int x3 , int y3)
     glEnd();
     glFlush();
 }
+
 void display()
 {
     glClearColor(0.1, 0.6, 0.4, 1.0);
@@ -39,6 +42,7 @@ void display()
     drawPolygon(150, 200, 300, 200, 350 ,400);
     glFlush();
 }
+
 void floodfill4(int x, int y, float oldcolor[3], float newcolor[3])
 {
     float color[3];
@@ -52,6 +56,7 @@ void floodfill4(int x, int y, float oldcolor[3], float newcolor[3])
         floodfill4(x, y - 1, oldcolor, newcolor);
     }
 }
+
 void mouse(int btn, int state, int x, int y)
 {
     if (btn == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
@@ -61,6 +66,7 @@ void mouse(int btn, int state, int x, int y)
         floodfill4(xi, yi, intCol, fillCol);
     }
 }
+
 void myinit()
 {
     glViewport(0, 0, ww, wh);
@@ -69,6 +75,7 @@ void myinit()
     gluOrtho2D(0.0, (GLdouble)ww, 0.0, (GLdouble)wh);
     glMatrixMode(GL_MODELVIEW);
 }
+
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
